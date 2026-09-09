@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanz Store — Jual Akun, Top Up & Joki Rank Mobile Legends</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Sprite ikon (dipakai ulang lewat <use>) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gradDiamond" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8fb4ff"/>
+      <stop offset="100%" stop-color="#e8b54d"/>
+    </linearGradient>
+
+    <symbol id="icon-diamond" viewBox="0 0 24 24">
+      <polygon points="5,9 19,9 12,22" fill="url(#gradDiamond)"/>
+      <polygon points="2,9 5,9 8,3 2,9" fill="#a9c4ff"/>
+      <polygon points="19,9 22,9 16,3 19,9" fill="#f0cf85"/>
+      <polygon points="5,9 19,9 16,3 8,3" fill="#cfe0ff"/>
+      <polygon points="8,3 16,3 12,9" fill="#eef4ff"/>
+    </symbol>
+
+    <symbol id="icon-rank" viewBox="0 0 24 24">
+      <path d="M12 2 L21 5.5 V11 C21 16.2 17.2 20.3 12 22 C6.8 20.3 3 16.2 3 11 V5.5 Z" fill="currentColor" opacity="0.18"/>
+      <path d="M12 2 L21 5.5 V11 C21 16.2 17.2 20.3 12 22 C6.8 20.3 3 16.2 3 11 V5.5 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <polygon points="12,7.5 15,11 12,17 9,11" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-chat" viewBox="0 0 24 24">
+      <path d="M12 3C7 3 3 6.6 3 11c0 2.3 1.1 4.4 2.9 5.8-.1 1.1-.5 2.3-1.3 3.4 1.6-.2 3-.8 4.1-1.7.7.2 1.5.3 2.3.3 5 0 9-3.6 9-8s-4-8-9-8Z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <div class="brand-text">
+        <span class="brand-name">Sanz Store</span>
+        <span class="brand-divider">|</span>
+        <span class="brand-tagline">Republik Of Stecu</span>
+      </div>
+    </div>
+    <div class="nav-side">
+      <nav class="page-nav">
+        <a href="#" data-target="page-akun" class="active">Akun</a>
+        <a href="#" data-target="page-topup">Top Up</a>
+        <a href="#" data-target="page-joki">Joki Rank</a>
+      </nav>
+      <a href="https://wa.me/6283126168346?text=Halo%20admin%2C%20saya%20mau%20jual%20akun%20Mobile%20Legends" class="nav-cta sell" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><use href="#icon-chat"></use></svg>
+        Jual Akun
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="energy-banner" aria-hidden="true">
+  <svg class="bg-svg" viewBox="0 0 1200 200" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="boltGradient" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"  stop-color="#00e5ff" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#7bf4ff" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="boltBlur" x="-20%" y="-300%" width="140%" height="700%">
+        <feGaussianBlur stdDeviation="6"/>
+      </filter>
+      <path id="boltPath" d="M-20,142 L44,147 L102,126 L191,128 L269,159 L327,154 L395,124 L455,149 L536,126 L606,127 L696,149 L754,158 L816,136 L911,162 L1003,125 L1094,159 L1174,125 L1220,130"/>
+    </defs>
+
+    <use href="#boltPath" class="bolt-glow" fill="none" stroke="url(#boltGradient)" stroke-width="14" filter="url(#boltBlur)"/>
+    <use href="#boltPath" class="bolt-core" fill="none" stroke="#eafcff" stroke-width="2.5"/>
+
+    <circle r="4" fill="#d8fbff" class="spark">
+      <animateMotion dur="4.5s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#boltPath"/>
+      </animateMotion>
+    </circle>
+    <circle r="3" fill="#9df3ff" class="spark">
+      <animateMotion dur="4.5s" begin="1.5s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#boltPath"/>
+      </animateMotion>
+    </circle>
+    <circle r="3.5" fill="#c8f8ff" class="spark">
+      <animateMotion dur="4.5s" begin="3s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#boltPath"/>
+      </animateMotion>
+    </circle>
+  </svg>
+  <div class="energy-banner__text-wrap"><span class="energy-banner__text">SanzstoreElit</span></div>
+</div>
+
+<div id="page-akun" class="page active-page">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Akun Mobile Legends Ganteng dan Kece</div>
+      <h1>Langkah Langkah</h1>
+      <div class="flow">
+        <span>Cek</span>
+        <span>Cocok</span>
+        <span>TF</span>
+        <span>Send Data</span>
+        <span>Done</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+
+      <div class="sec-head reveal">
+        <h2>Daftar Akun</h2>
+        <p>Klik chat untuk tanya detail atau konfirmasi pembelian.</p>
+      </div>
+      <div class="grid-akun reveal">
+
+        <div class="card">
+          <div class="card-media"><img src="akun-1.jpeg" alt="Preview koleksi akun #SZ-01"></div>
+          <div class="card-body">
+            <div class="card-top"><span class="status">Ready</span></div>
+            <h3>Akun #SZ-01</h3>
+            <div class="card-tags"><span>Kolektor Ahli II</span><span>137 skin</span></div>
+            <div class="card-foot"><b>Price Rp.200.000</b><a href="https://wa.me/6283126168346">Chat</a></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-media"><img src="akun-2.jpeg" alt="Preview koleksi akun #SZ-02"></div>
+          <div class="card-body">
+            <div class="card-top"><span class="status">Ready</span></div>
+            <h3>Akun #SZ-02</h3>
+            <div class="card-tags"><span>Kolektor Ternama V</span><span>142 skin</span></div>
+            <div class="card-foot"><b>Price Rp.400.000</b><a href="https://wa.me/6283126168346">Chat</a></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-media"><img src="akun-3.jpeg" alt="Preview koleksi akun #SZ-03"></div>
+          <div class="card-body">
+            <div class="card-top"><span class="status">Ready</span></div>
+            <h3>Akun #SZ-03</h3>
+            <div class="card-tags"><span>Kolektor Terhormat III</span><span>389 skin</span></div>
+            <div class="card-foot"><b>Price Rp.650.000</b><a href="https://wa.me/6283126168346">Chat</a></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-media placeholder"></div>
+          <div class="card-body">
+            <div class="card-top"><span class="slot-kosong">Segera diisi</span></div>
+            <h3>Akun #SZ-04</h3>
+            <div class="card-tags"><span>Slot belum diisi</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimoni Pembeli (bukti chat WhatsApp) =====
+       Tiap kotak .testi-photo di bawah adalah slot buat foto screenshot chat WA kamu.
+       Ganti nama file src sesuai foto yang kamu punya, atau duplikat blok .testi
+       kalau mau nambah lebih dari 3. -->
+  <section class="testi-wrap">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Testimoni Pembeli</h2>
+        <p>Bukti chat asli dari yang sudah beli akun di Sanz Store.</p>
+      </div>
+      <div class="testi-row reveal">
+        <div class="testi">
+          <div class="testi-photo"><img src="testi-1.jpeg" alt="Bukti chat WhatsApp pembeli Asepzy"></div>
+          <b>Asepzy.</b>
+        </div>
+        <div class="testi">
+          <div class="testi-photo"><img src="testi-2.jpeg" alt="Bukti chat WhatsApp pembeli Sanskuy"></div>
+          <b>Sanskuy.</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <h2>Tanya Spek Full dll Langsung Saja Chat Di Bawah.</h2>
+      <p>Chat admin sekarang untuk cek ketersediaan dan proses pembelian.</p>
+      <a href="https://wa.me/6283126168346" class="nav-cta">Chat via WhatsApp</a>
+    </div>
+  </section>
+
+</div>
+
+<div id="page-topup" class="page">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Top Up Diamond Mobile Legends Termurah</div>
+      <h1>Langkah Langkah</h1>
+      <div class="flow">
+        <span>Pilih Nominal</span>
+        <span>Kirim ID Server</span>
+        <span>TF</span>
+        <span>Diamond Masuk</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Pilihan Diamond</h2>
+        <p>Klik chat untuk konfirmasi nominal dan kirim ID + Server kamu.</p>
+      </div>
+      <div class="diamond-grid reveal">
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="diamond-icon"><svg viewBox="0 0 24 24"><use href="#icon-diamond"></use></svg></div>
+            <div class="diamond-amount">85 Diamond</div>
+          </div>
+          <div class="diamond-note">Top up reguler</div>
+          <div class="diamond-foot"><b>Rp.25.503</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card tag-populer">
+          <span class="diamond-tag populer">Populer</span>
+          <div class="diamond-head">
+            <div class="diamond-icon"><svg viewBox="0 0 24 24"><use href="#icon-diamond"></use></svg></div>
+            <div class="diamond-amount">172 Diamond</div>
+          </div>
+          <div class="diamond-note">Top up reguler</div>
+          <div class="diamond-foot"><b>Rp.54.129</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="diamond-icon"><svg viewBox="0 0 24 24"><use href="#icon-diamond"></use></svg></div>
+            <div class="diamond-amount">257 Diamond</div>
+          </div>
+          <div class="diamond-note">Top up reguler</div>
+          <div class="diamond-foot"><b>Rp.80.415</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="diamond-icon"><svg viewBox="0 0 24 24"><use href="#icon-diamond"></use></svg></div>
+            <div class="diamond-amount">344 Diamond</div>
+          </div>
+          <div class="diamond-note">Top up reguler</div>
+          <div class="diamond-foot"><b>Rp.104.573</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="diamond-icon"><svg viewBox="0 0 24 24"><use href="#icon-diamond"></use></svg></div>
+            <div class="diamond-amount">429 Diamond</div>
+          </div>
+          <div class="diamond-note">Top up reguler</div>
+          <div class="diamond-foot"><b>Rp.130.160</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="diamond-icon"><svg viewBox="0 0 24 24"><use href="#icon-diamond"></use></svg></div>
+            <div class="diamond-amount">514 Diamond</div>
+          </div>
+          <div class="diamond-note">Top up reguler</div>
+          <div class="diamond-foot"><b>Rp.158.508</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card tag-hemat">
+          <span class="diamond-tag hemat">Hemat Maksimal</span>
+          <div class="diamond-head">
+            <div class="diamond-icon"><svg viewBox="0 0 24 24"><use href="#icon-diamond"></use></svg></div>
+            <div class="diamond-amount">706 Diamond</div>
+          </div>
+          <div class="diamond-note">Top up reguler</div>
+          <div class="diamond-foot"><b>Rp.215.890</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="diamond-icon"><svg viewBox="0 0 24 24"><use href="#icon-diamond"></use></svg></div>
+            <div class="diamond-amount">Weekly Diamond Pass</div>
+          </div>
+          <div class="diamond-note">Berlaku 7 hari setelah diklaim</div>
+          <div class="diamond-foot"><b>Rp.30.143</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="diamond-icon"><svg viewBox="0 0 24 24"><use href="#icon-diamond"></use></svg></div>
+            <div class="diamond-amount">Twilight Pass</div>
+          </div>
+          <div class="diamond-note">Event pass musiman</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <h2>Nominal Lain? Langsung Chat Saja.</h2>
+      <p>Sebutkan nominal diamond, ID, dan Server kamu lewat WhatsApp untuk diproses admin.</p>
+      <a href="https://wa.me/6283126168346" class="nav-cta">Chat via WhatsApp</a>
+    </div>
+  </section>
+
+</div>
+
+<div id="page-joki" class="page">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Joki Rank Mobile Legends Tercepat</div>
+      <h1>Langkah Langkah</h1>
+      <div class="flow">
+        <span>Pilih Rank</span>
+        <span>Kirim Akun</span>
+        <span>Proses Joki</span>
+        <span>Rank Naik</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Harga Joki per Bintang</h2>
+        <p>Harga terjangkau, dihitung per bintang sesuai rank kamu sekarang. Klik chat untuk konfirmasi harga.</p>
+      </div>
+      <div class="diamond-grid reveal">
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#8a95ab"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Warrior</div>
+          </div>
+          <div class="diamond-note">Rp.1000 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#5ec98c"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Elite</div>
+          </div>
+          <div class="diamond-note">Rp.1500 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#4f6ef7"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Master</div>
+          </div>
+          <div class="diamond-note">Rp.2000 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#7b5cf0"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Grandmaster</div>
+          </div>
+          <div class="diamond-note">Rp.3000 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#b25cf0"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Epic</div>
+          </div>
+          <div class="diamond-note">Rp.5000 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#f0619a"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Legend</div>
+          </div>
+          <div class="diamond-note">Rp.6000 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#ef4b4b"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Mythic</div>
+          </div>
+          <div class="diamond-note">Rp.8000 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#f0a23f"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Mythical Honor</div>
+          </div>
+          <div class="diamond-note">Rp.10000 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#e8b54d"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Mythical Glory</div>
+          </div>
+          <div class="diamond-note">Rp.12000 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+        <div class="diamond-card">
+          <div class="diamond-head">
+            <div class="rank-icon" style="color:#eafcff"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+            <div class="diamond-amount">Mythical Immortal</div>
+          </div>
+          <div class="diamond-note">Rp.15000 / B</div>
+          <div class="diamond-foot"><b>Chat untuk harga</b><a href="https://wa.me/6283126168346">Chat</a></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Paket Joki</h2>
+        <p>Paket awal season, dari rank ke rank tujuan. Klik chat untuk konfirmasi harga.</p>
+      </div>
+      <div class="paket-grid reveal">
+
+        <div class="paket-card" style="--accent:#b25cf0">
+          <div class="paket-path">
+            <div class="paket-rank" style="color:#8a95ab">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Warrior</span>
+            </div>
+            <div class="paket-arrow" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="paket-rank" style="color:#b25cf0">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Epic</span>
+            </div>
+          </div>
+          <div class="paket-foot">
+            <span class="paket-note">Naik rank dari awal season</span>
+            <a href="https://wa.me/6283126168346?text=Halo%20admin%2C%20saya%20mau%20joki%20dari%20Warrior%20ke%20Epic">Chat</a>
+          </div>
+        </div>
+
+        <div class="paket-card" style="--accent:#ef4b4b">
+          <span class="paket-tag">Paling Diminati</span>
+          <div class="paket-path">
+            <div class="paket-rank" style="color:#b25cf0">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Epic</span>
+            </div>
+            <div class="paket-arrow" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="paket-rank" style="color:#ef4b4b">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Mythic</span>
+            </div>
+          </div>
+          <div class="paket-foot">
+            <span class="paket-note">Jalur favorit pemain</span>
+            <a href="https://wa.me/6283126168346?text=Halo%20admin%2C%20saya%20mau%20joki%20dari%20Epic%20ke%20Mythic">Chat</a>
+          </div>
+        </div>
+
+        <div class="paket-card" style="--accent:#f0a23f">
+          <div class="paket-path">
+            <div class="paket-rank" style="color:#ef4b4b">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Mythic</span>
+            </div>
+            <div class="paket-arrow" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="paket-rank" style="color:#f0a23f">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Honor</span>
+            </div>
+          </div>
+          <div class="paket-foot">
+            <span class="paket-note">Menuju gelar Honor</span>
+            <a href="https://wa.me/6283126168346?text=Halo%20admin%2C%20saya%20mau%20joki%20dari%20Mythic%20ke%20Honor">Chat</a>
+          </div>
+        </div>
+
+        <div class="paket-card" style="--accent:#e8b54d">
+          <div class="paket-path">
+            <div class="paket-rank" style="color:#f0a23f">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Honor</span>
+            </div>
+            <div class="paket-arrow" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="paket-rank" style="color:#e8b54d">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Glory</span>
+            </div>
+          </div>
+          <div class="paket-foot">
+            <span class="paket-note">Selangkah menuju puncak</span>
+            <a href="https://wa.me/6283126168346?text=Halo%20admin%2C%20saya%20mau%20joki%20dari%20Honor%20ke%20Glory">Chat</a>
+          </div>
+        </div>
+
+        <div class="paket-card" style="--accent:#eafcff">
+          <span class="paket-tag top">Kelas Tertinggi</span>
+          <div class="paket-path">
+            <div class="paket-rank" style="color:#e8b54d">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Glory</span>
+            </div>
+            <div class="paket-arrow" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="paket-rank" style="color:#eafcff">
+              <div class="rank-icon"><svg viewBox="0 0 24 24"><use href="#icon-rank"></use></svg></div>
+              <span>Immortal</span>
+            </div>
+          </div>
+          <div class="paket-foot">
+            <span class="paket-note">Puncak tertinggi Land of Dawn</span>
+            <a href="https://wa.me/6283126168346?text=Halo%20admin%2C%20saya%20mau%20joki%20dari%20Glory%20ke%20Immortal">Chat</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <h2>Rank Sekarang Apa? Langsung Chat Saja.</h2>
+      <p>Sebutkan rank sekarang, rank tujuan, dan akun kamu lewat WhatsApp untuk diproses admin.</p>
+      <a href="https://wa.me/6283126168346" class="nav-cta">Chat via WhatsApp</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">&copy; 2026 Sanz Store — Republik Of Stecu</div>
+</footer>
+
+<script>
+  document.querySelectorAll('.page-nav a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      document.querySelectorAll('.page-nav a').forEach(function(a){ a.classList.remove('active'); });
+      document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active-page'); });
+      this.classList.add('active');
+      document.getElementById(this.dataset.target).classList.add('active-page');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      refreshReveal();
+    });
+  });
+
+  // Efek scroll-reveal sederhana: konten muncul halus saat masuk layar
+  var revealObserver = ('IntersectionObserver' in window)
+    ? new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting){
+            entry.target.classList.add('is-in');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' })
+    : null;
+
+  function refreshReveal(){
+    document.querySelectorAll('.page.active-page .reveal:not(.is-in)').forEach(function(el){
+      if (revealObserver) revealObserver.observe(el);
+      else el.classList.add('is-in');
+    });
+  }
+  refreshReveal();
+</script>
+
+</body>
+</html>
